@@ -1,11 +1,12 @@
 import './index.css'
+import Logo from'./images/logo.svg';
 
 function App() {
   return (
     <div className="root">
     <div className="page">
       <header className="header">
-        <img src="<%=require('./images/logo.svg')%>" alt="Логотип" className="header__logo" />
+        <img src={Logo} alt="Логотип" className="header__logo" />
       </header>
       <main>
         <section className="profile">
