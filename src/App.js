@@ -3,6 +3,7 @@ import './index.css'
 import Header from "./components/Header.js";
 import Footer from "./components/Footer.js";
 import Main from "./components/Main.js";
+import ImagePopup from "./components/ImagePopup.js";
 
 
 
@@ -43,13 +44,7 @@ function App() {
                 </form>
               </div>
           </div>
-          <div className="popup popup_type_photos" id="photo">
-            <div className="popup__photo ">
-              <button type="button" id="photo-close" className="popup__close-button popup__close-button_photo"></button>
-              <img src="#" alt="картинка" className="popup__img" />
-                <p className="popup__description"></p>
-            </div>
-          </div>
+          <ImagePopup />
           <div className="popup popup_type_del" id="del">
             <div className="popup__del popup__container">
               <button type="button" id="del-close" className="popup__close-button"></button>
