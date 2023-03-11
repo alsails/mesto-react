@@ -14,7 +14,7 @@ function App() {
       <Main />
       <Footer />
       <div className="popup popup_type_profile" id="profile">
-        <div className="popup__profile popup__container">
+        <div className="popup__container">
           <button type="button" id="profile-close" className="popup__close-button"></button>
           <h2 className="popup__title">Редактировать профиль</h2>
           <form action="submit" className="form" name="editProfile" novalidate>
