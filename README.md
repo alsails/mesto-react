@@ -10,4 +10,18 @@
 
 Для верстки проекта использовалс макет из фигмы: https://www.figma.com/file/2cn9N9jSkmxD84oJik7xL7/JavaScript.-Sprint-4?node-id=0%3A1
 
-Ссылка на проект: https://alsails.github.io/mesto
+Ссылка на проект: https://alsails.github.io/mesto-react
+
+Для просмотра проекта на вашем устройстве необходимо его склонировать при помощи команды
+
+### `gir clone git@github.com:alsails/mesto-react.git`
+
+Для запуска проекта локально на устройстве необходимо ввести команду:
+
+### `npm run start`
+
+Открыть браузер и перейти по http://localhost:3000
+
+Для сборки проекта:
+
+### `npm run build`
