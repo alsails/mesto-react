@@ -34,7 +34,7 @@ class Api extends React.Component {
     return fetch(`${this.baseUrl}/users/me/avatar`, {
       method: 'PATCH',
       body: JSON.stringify({
-        avatar: data
+        avatar: data.avatar
       }),
       headers: this.headers
     })
@@ -46,7 +46,7 @@ class Api extends React.Component {
       method: 'PATCH',
       body: JSON.stringify({
         name: data.name,
-        about: data.description
+        about: data.about
       }),
       headers: this.headers
     })

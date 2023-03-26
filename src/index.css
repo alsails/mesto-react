@@ -19,7 +19,6 @@
 @import url(./blocks/cards/cards.css);
 @import url(./blocks/card/card.css);
 @import url(./blocks/card/__trash/card__trash.css);
-@import url(./blocks/card/__trash/_opened/card__trash_opened.css);
 @import url(./blocks/card/__img/card__img.css);
 @import url(./blocks/card/__info/card__info.css);
 @import url(./blocks/card/__name/card__name.css);
