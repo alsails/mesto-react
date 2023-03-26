@@ -23,7 +23,7 @@ function App() {
   const [selectedCard, setSelectedCard] = useState({})
   const [currentUser, setCurrentUser] = useState({})
   const [cards, setCards] = useState([])
-  const [isStatus, setIsStatus] = useState(false);
+  const [isStatus, setIsStatus] = useState(false)
 
   useEffect(() => {
     Api
@@ -73,7 +73,7 @@ function App() {
   }
 
   function handleCardLike(card) {
-    const isLiked = card.likes.some(i => i._id === currentUser._id);
+    const isLiked = card.likes.some(i => i._id === currentUser._id)
 
     if (!isLiked) {
       Api
@@ -81,20 +81,20 @@ function App() {
         .then((newCard) => {
           setCards((state) =>
             state.map((c) => (c._id === card._id ? newCard : c))
-          );
+          )
         })
         .catch(err =>
-          console.log(err));
+          console.log(err))
     } else {
       Api
         .delLike(card._id, isLiked)
         .then((newCard) => {
           setCards((state) =>
             state.map((c) => (c._id === card._id ? newCard : c))
-          );
+          )
         })
         .catch(err =>
-          console.log(err));
+          console.log(err))
     }
   }
 
