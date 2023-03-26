@@ -1,30 +1,33 @@
-import {useRef, useEffect} from "react";
+import {useState, useEffect} from "react";
 import PopupWithForm from "./PopupWithForm";
 import '../index.css'
 
 function AddPlacePopup({isOpened, onClose, onAddCard, status}) {
-    const nameRef = useRef()
-    const linkRef = useRef()
 
-    const  handleNameChange = e => {
-        return nameRef.current.value
+    const [cardName, setCardName] = useState("")
+    const [cardLink, setCardLink] = useState("")
+
+    const  handleCardNameChange = e => {
+      setCardName(e.target.value)
     }
-
-    const  handleLinkChange = e => {
-        return linkRef.current.value
+  
+     const  handleCardLinkChange = e => {
+      setCardLink(e.target.value)
     }
 
     useEffect(() => {
-        nameRef.current.value = ''
-        linkRef.current.value = ''
+      if (isOpened) {
+          setCardName("")
+          setCardLink("")
+      }
     }, [isOpened]);
 
     function handleSubmit(e) {
         e.preventDefault();
 
         onAddCard({
-            name: nameRef.current.value,
-            link: linkRef.current.value,
+            name: cardName,
+            link: cardLink,
         });
     }
 
@@ -38,10 +41,10 @@ function AddPlacePopup({isOpened, onClose, onAddCard, status}) {
             onSubmit={handleSubmit}
           >
             <input id="title-input" type="text" className="form__input" name="name" placeholder="Название" required
-              minLength="2" maxLength="30" ref={nameRef} onChange={handleNameChange} />
+              minLength="2" maxLength="30" value={cardName} onChange={handleCardNameChange} />
             <span id="title-input-error" className="form__error form__error-visible"></span>
             <input id="link-input" type="url" className="form__input" name="link" placeholder="Ссылка на картинку"
-              required ref={linkRef} onChange={handleLinkChange} />
+              required value={cardLink} onChange={handleCardLinkChange} />
             <span id="link-input-error" className="form__error form__error-visible"></span>
           </PopupWithForm>
     );
